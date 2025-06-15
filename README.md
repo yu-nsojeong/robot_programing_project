@@ -4,7 +4,14 @@ TurtleBot3와 ROS 2를 이용해 미로를 탐색하고, 탈출하며, 목표 �
 SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경을 이해하고 주행할 수 있습니다.  
 시뮬레이션 환경에서도 동일한 기능을 테스트할 수 있습니다.
 
-## 📌 주요 기능
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2022.04-orange?logo=ubuntu)
+![ROS2](https://img.shields.io/badge/ROS-2%20Humble-blue?logo=ros)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+## 주요 기능
 
 1. **오른쪽 우선 백트래킹 알고리즘 기반 SLAM 및 미로 탈출**
    - LiDAR와 IMU 데이터를 이용해 벽 정보를 추출하고, 탐색하면서 맵을 생성합니다.
@@ -13,7 +20,7 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
 3. **시뮬레이션 환경 지원**
    - Gazebo 또는 RViz 환경에서 전체 과정을 시뮬레이션 할 수 있습니다.
 
-## 🚀 사용 방법
+## 사용 방법
 
 ### 1. 패키지 설치
 
