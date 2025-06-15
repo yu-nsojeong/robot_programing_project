@@ -28,8 +28,8 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
 
 Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드하여 설치합니다.
 
-- 📥 [Ubuntu 22.04 LTS Desktop image (64-bit)](https://releases.ubuntu.com/22.04/)
-- 📖 설치 방법: [Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop)
+- [Ubuntu 22.04 LTS Desktop image (64-bit)](https://releases.ubuntu.com/22.04/)
+- 설치 방법: [Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop)
 
 ---
 
@@ -37,8 +37,8 @@ Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드하여 설
 
 공식 ROS 2 문서를 참고하여 ROS 2 Humble을 설치합니다.
 
-- 📘 [ROS 2 Humble 설치 가이드](https://docs.ros.org/en/humble/Installation.html)
-- ✅ 대부분의 Linux 사용자에게는 **Debian 패키지 설치 방법**을 권장합니다.
+- [ROS 2 Humble 설치 가이드](https://docs.ros.org/en/humble/Installation.html)
+- 대부분의 Linux 사용자에게는 **Debian 패키지 설치 방법**을 권장합니다.
 
 
 ### 1. 패키지 설치
@@ -47,7 +47,7 @@ Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드하여 설
 # 워크스페이스 생성 및 빌드
 mkdir -p ~/maze_ws/src
 cd ~/maze_ws/src
-git clone <이 리포지토리 주소>
+git clone https://github.com/yu-nsojeong/robot_programing_project.git
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
 colcon build --symlink-install
