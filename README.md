@@ -51,3 +51,8 @@ git clone https://github.com/yu-nsojeong/robot_programing_project.git
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
 colcon build --symlink-install
+```
+
+### 2.. 터틀봇 브링업 실행
+터틀봇 bring up을 비롯한 로봇및 pc 초기 setting 설치방법은 아래를 참고하세요.
+- 설치 방법: [Quick start guide]([https://ubuntu.com/tutorials/install-ubuntu-desktop](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/))
