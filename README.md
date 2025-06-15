@@ -51,8 +51,43 @@ git clone https://github.com/yu-nsojeong/robot_programing_project.git
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
 colcon build --symlink-install
+source install/setup.bash
 ```
 
 ### 2.. 터틀봇 브링업 실행
 터틀봇 bring up을 비롯한 로봇및 pc 초기 setting 설치방법은 아래를 참고하세요.
 - 설치 방법: [Quick start guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
+
+
+### 1. SBC 원격 접속
+```bash
+$ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
+```
+ROS_DOMAIN_ID 통일
+```bash
+$ export TURTLEBOT3_MODEL=burger
+$ ros2 launch turtlebot3_bringup robot.launch.py
+```
+RMW 구현 통일
+```bash
+$ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+터틀봇 도메인 통일
+```bash
+$ export ROS_DOMAIN_ID=30
+```
+###
+
+```bash
+$ ros2 topic list
+
+#토픽 확인하여 아래와 같이 뜨면 잘 된 것입니다.
+ros2 topic list 
+/battery_state
+/cmd_vel
+/imu
+...
+
+```
+
+
