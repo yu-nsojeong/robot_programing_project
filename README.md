@@ -160,6 +160,6 @@ $  ros2 run find_maze vision
 $ ffmpeg -f v4l2 -i /dev/video0 \
 -s 1200x800 -r 15 \
 -vcodec libx264 -preset ultrafast -tune zerolatency -crf 28 \
--f mpegts udp://172.100.2.21:5001
+-f mpegts udp://172.100.2.21:5001  #개인 PC환경에 따라 다름
 ```
 
