@@ -63,16 +63,16 @@ source install/setup.bash
 ```bash
 $ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
 ```
-ROS_DOMAIN_ID 통일
+ROS_DOMAIN_ID 통일(ssh 접속 후) 
 ```bash
 $ export TURTLEBOT3_MODEL=burger
 $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
-RMW 구현 통일
+RMW 구현 통일(내 pc)
 ```bash
 $ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
-터틀봇 도메인 통일
+ROS_DOMAIN_ID 통일(내 pc 및 ssh)
 ```bash
 $ export ROS_DOMAIN_ID=30
 ```
@@ -81,7 +81,7 @@ $ export ROS_DOMAIN_ID=30
 ```bash
 $ ros2 topic list
 
-#토픽 확인하여 아래와 같이 뜨면 잘 된 것입니다.
+#토픽 확인하여 아래와 같이 뜨면 잘 된 것입니다. (ssh 접속하지 않은 내 컴퓨터에서)
 ros2 topic list 
 /battery_state
 /cmd_vel
