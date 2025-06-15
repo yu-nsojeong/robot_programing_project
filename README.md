@@ -57,7 +57,7 @@ source install/setup.bash
 colcon build --symlink-install
 source install/setup.bash
 ```
-# 2. 패키지 실행
+## 2. 패키지 실행
 
 실행시 imu 패키지에서 imu 값이 셋팅되므로 터틀봇을 잘 위치시킨 후 imu 노드 및 런치를 실행시키기 바랍니다.
 
