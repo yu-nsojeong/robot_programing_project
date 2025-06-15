@@ -19,7 +19,9 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
    - 완성된 맵을 기반으로 랜덤한 위치에서 로컬리제이션을 수행하고, 주어진 목적지까지 A* 알고리즘으로 이동합니다.
 3. **시뮬레이션 환경 지원**
    - Gazebo 또는 RViz 환경에서 전체 과정을 시뮬레이션 할 수 있습니다.
-
+4. **웹캠을 통해 교통표지판 인식**
+   - 사전에 학습된 CNN모델을 이용해 프레임 내 교통 표지판을 분류합니다. 최종 결과값을 이용하여 로봇의 주행속도를 조절합니다.
+     
 ## 사용 영상
 
 ### 백트레킹 영상
@@ -149,3 +151,12 @@ $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py
 ```bash
 $ ros2 launch find_maze right_wall_followerback.launch.py
 ```
+
+### Computer vision
+```bash
+$ ffmpeg -f v4l2 -i /dev/video0 \
+-s 1200x800 -r 15 \
+-vcodec libx264 -preset ultrafast -tune zerolatency -crf 28 \
+-f mpegts udp://172.100.2.21:5001
+```
+
