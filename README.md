@@ -22,33 +22,31 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
 
 ## 사용 방법
 
-💻 환경 구축 방법
-1. Ubuntu 22.04 LTS 설치 (Remote PC)
-Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드합니다.
+## 💻 환경 설정
 
-👉 Ubuntu 22.04 LTS Desktop image (64-bit)
+### 1. Ubuntu 22.04 LTS 설치 (Remote PC)
 
-이후, 공식 가이드에 따라 Ubuntu를 설치합니다.
+Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드하여 설치합니다.
 
-🔧 Install Ubuntu Desktop
+- 📥 [Ubuntu 22.04 LTS Desktop image (64-bit)](https://releases.ubuntu.com/22.04/)
+- 📖 설치 방법: [Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop)
 
-2. ROS 2 Humble 설치 (Remote PC)
-공식 문서를 참고하여 ROS 2 Humble을 설치합니다.
+---
 
-📘 ROS 2 Humble 설치 가이드
+### 2. ROS 2 Humble 설치 (Remote PC)
 
-대부분의 Linux 사용자에게는 Debian 패키지 설치 방식을 권장합니다.
+공식 ROS 2 문서를 참고하여 ROS 2 Humble을 설치합니다.
+
+- 📘 [ROS 2 Humble 설치 가이드](https://docs.ros.org/en/humble/Installation.html)
+- ✅ 대부분의 Linux 사용자에게는 **Debian 패키지 설치 방법**을 권장합니다.
+
 
 ### 1. 패키지 설치
 
 ```bash
-# ROS 2 Humble 기반 환경 준비
-sudo apt update
-sudo apt install ros-humble-desktop
-
 # 워크스페이스 생성 및 빌드
-mkdir -p ~/turtlebot3_ws/src
-cd ~/turtlebot3_ws/src
+mkdir -p ~/maze_ws/src
+cd ~/maze_ws/src
 git clone <이 리포지토리 주소>
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
