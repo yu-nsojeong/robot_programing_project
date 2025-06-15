@@ -20,6 +20,16 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
 3. **시뮬레이션 환경 지원**
    - Gazebo 또는 RViz 환경에서 전체 과정을 시뮬레이션 할 수 있습니다.
 
+## 사용 영상
+
+### 백트레킹 영상
+[Screencast from 06-15-2025 08:20:04 PM.webm](https://github.com/user-attachments/assets/ef959bc0-720d-4071-844d-05d92196cdda)
+
+### 로컬리제이션 영상
+
+
+
+
 ## 사용 방법
 
 ## 💻 환경 설정
