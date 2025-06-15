@@ -22,6 +22,23 @@ SLAM, Localization, A* 경로 계획 등을 통해 자율적으로 미로 환경
 
 ## 사용 방법
 
+💻 환경 구축 방법
+1. Ubuntu 22.04 LTS 설치 (Remote PC)
+Ubuntu 22.04 LTS Desktop 이미지를 아래 링크에서 다운로드합니다.
+
+👉 Ubuntu 22.04 LTS Desktop image (64-bit)
+
+이후, 공식 가이드에 따라 Ubuntu를 설치합니다.
+
+🔧 Install Ubuntu Desktop
+
+2. ROS 2 Humble 설치 (Remote PC)
+공식 문서를 참고하여 ROS 2 Humble을 설치합니다.
+
+📘 ROS 2 Humble 설치 가이드
+
+대부분의 Linux 사용자에게는 Debian 패키지 설치 방식을 권장합니다.
+
 ### 1. 패키지 설치
 
 ```bash
