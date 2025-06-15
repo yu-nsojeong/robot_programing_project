@@ -1,0 +1,5 @@
+float32 degree
+float32 distance
+---
+bool success
+string message

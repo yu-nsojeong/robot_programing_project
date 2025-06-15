@@ -6,11 +6,17 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
+        "/home/yoon/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
         "/home/yoon/turtlebot3_ws/install/turtlebot3_msgs/include/**",
+        "/home/yoon/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
         "/home/yoon/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/include/**",
         "/home/yoon/turtlebot3_ws/install/dynamixel_sdk/include/**",
         "/opt/ros/humble/include/**",
-        "/home/yoon/maze_ws/src/testnode2/include/**",
+        "/home/yoon/turtlebot3_ws/src/DynamixelSDK/ros/dynamixel_sdk/include/**",
+        "/home/yoon/turtlebot3_ws/src/DynamixelSDK/ros/dynamixel_sdk_examples/include/**",
+        "/home/yoon/turtlebot3_ws/src/turtlebot3/turtlebot3_node/include/**",
+        "/home/yoon/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_fake_node/include/**",
+        "/home/yoon/turtlebot3_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",

@@ -1,0 +1,11 @@
+# Goal
+int32 target_row
+int32 target_col
+---
+# Result
+bool success
+string message
+---
+# Feedback
+int32 current_row
+int32 current_col
