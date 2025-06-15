@@ -50,16 +50,20 @@ cd ~/maze_ws/src
 git clone https://github.com/yu-nsojeong/robot_programing_project.git
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
+
+colcon build  --packages-select find_maze_interfaces
+source install/setup.bash
+
 colcon build --symlink-install
 source install/setup.bash
 ```
 
-### 2.. 터틀봇 브링업 실행
+### 2. 터틀봇 브링업
 터틀봇 bring up을 비롯한 로봇및 pc 초기 setting 설치방법은 아래를 참고하세요.
 - 설치 방법: [Quick start guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 
 
-### 1. SBC 원격 접속
+### 2-1. SBC 원격 접속
 ```bash
 $ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
 ```
@@ -89,5 +93,35 @@ ros2 topic list
 ...
 
 ```
+### 3. 패키지 실행
+
+실행시 imu 패키지에서 imu 값이 셋팅되므로 터틀봇을 잘 위치시킨 후 imu 노드 및 런치를 실행시키기 바랍니다.
+
+##시뮬레이션
+```bash
+$ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
+```
+#시뮬레이션 localization
+```bash
+$ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
+```
+```bash
+$  ros2 launch find_maze localization_nav_notclient.launch.py 
+```
+```bash
+$  ros2 run find_maze kac 
+```
+
+#시뮬레이션 back tracking
+```bash
+$ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
+```
+```bash
+$ ros2 launch find_maze right_wall_followerback.launch.py
+```
+
+
+
+##실제 환경
 
 
