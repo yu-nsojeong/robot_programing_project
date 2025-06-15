@@ -57,16 +57,16 @@ source install/setup.bash
 colcon build --symlink-install
 source install/setup.bash
 ```
-### 2. 패키지 실행
+# 2. 패키지 실행
 
 실행시 imu 패키지에서 imu 값이 셋팅되므로 터틀봇을 잘 위치시킨 후 imu 노드 및 런치를 실행시키기 바랍니다.
 
 ## 2-1시뮬레이션
-#시뮬레이션 가제보 실행
+###시뮬레이션 가제보 실행
 ```bash
 $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
 ```
-# 시뮬레이션 localization
+### 시뮬레이션 localization
 ```bash
 $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
 ```
@@ -77,7 +77,7 @@ $  ros2 launch find_maze localization_nav_notclient.launch.py
 $  ros2 run find_maze kac 
 ```
 
-# 시뮬레이션 back tracking
+### 시뮬레이션 back tracking
 ```bash
 $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
 ```
@@ -86,25 +86,25 @@ $ ros2 launch find_maze right_wall_followerback.launch.py
 ```
 
 ##실제 환경
-### 2-2. 터틀봇 브링업 (실제 로봇 활용)
+## 2-2. 터틀봇 브링업 (실제 로봇 활용)
 터틀봇 bring up을 비롯한 로봇및 pc 초기 setting 설치방법은 아래를 참고하세요.
 - 설치 방법: [Quick start guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 
 
-# 2-2-1. SBC 원격 접속
+### 2-2-1. SBC 원격 접속
 ```bash
 $ ssh ubuntu@{IP_ADDRESS_OF_RASPBERRY_PI}
 ```
-# 2-2-2. ROS_DOMAIN_ID 통일(ssh 접속 후) 
+### 2-2-2. ROS_DOMAIN_ID 통일(ssh 접속 후) 
 ```bash
 $ export TURTLEBOT3_MODEL=burger
 $ ros2 launch turtlebot3_bringup robot.launch.py
 ```
-# 2-2-3. RMW 구현 통일(내 pc)
+### 2-2-3. RMW 구현 통일(내 pc)
 ```bash
 $ export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 ```
-# 2-3-4. ROS_DOMAIN_ID 통일(내 pc 및 ssh)
+### 2-3-4. ROS_DOMAIN_ID 통일(내 pc 및 ssh)
 ```bash
 $ export ROS_DOMAIN_ID=30
 ```
@@ -121,7 +121,7 @@ ros2 topic list
 
 ```
 
-# localization
+### localization
 ```bash
 $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
 ```
@@ -132,7 +132,7 @@ $  ros2 launch find_maze localization_nav_notclient.launch.py
 $  ros2 run find_maze kac 
 ```
 
-# back tracking
+### back tracking
 ```bash
 $ ros2 launch turtlebot3_gazebo turtlebot3_world_maze.launch.py 
 ```
