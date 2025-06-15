@@ -154,6 +154,9 @@ $ ros2 launch find_maze right_wall_followerback.launch.py
 
 ### Computer vision
 ```bash
+$  ros2 run find_maze vision
+```
+```bash
 $ ffmpeg -f v4l2 -i /dev/video0 \
 -s 1200x800 -r 15 \
 -vcodec libx264 -preset ultrafast -tune zerolatency -crf 28 \
